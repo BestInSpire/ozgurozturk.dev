@@ -1,0 +1,159 @@
+@import ../global/veriables
+.container
+    height: auto
+    margin-top: 150px
+    margin-bottom: 100px
+.about-me
+    display: flex
+    align-items: center
+    justify-content: center
+    height: calc(100vh - 400px)
+    width: 100%
+    gap: 150px
+    margin-bottom: 200px
+    .image-container
+        display: flex
+        position: relative
+        width: 350px
+        height: 350px
+        .image
+            height: 100%
+            width: 100%
+            background-image: url("../assets/images/profile.jpeg")
+            background-position: center
+            background-repeat: no-repeat
+            background-size: cover
+        .image::before
+            position: absolute
+            content: ''
+            border: 6px solid $blue
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            z-index: -1
+            transform: translate3d(26px, 26px, -26px)
+    .details
+        display: flex
+        flex-direction: row
+        gap: 50px
+        justify-content: center
+        margin-top: 30px
+        align-items: cener
+        color: $gray3
+        width: auto
+        ul
+            list-style: none
+            white-space: none
+            li
+                padding: 15px 0
+                span
+                    color: $white
+                span::before
+                    content: ' '
+h2.title
+    margin: 80px 0
+    text-align: center
+    color: $white
+
+h2.title::before
+    position: absolute
+    background-color: $blue
+    content: ""
+    height: 2px
+    width: 30px
+    transform: translate(-50px, 15px)
+h2.title::after
+    position: absolute
+    background-color: $blue
+    content: ""
+    height: 2px
+    width: 30px
+    transform: translate(20px, 15px)
+
+.my-skills
+    display: flex
+    flex-wrap: wrap
+    gap: 50px
+    justify-content: center
+    align-items: center
+
+    .chart-bar
+        width: 300px!important
+        border-radius: 2px
+        display: block
+        height: 2px
+        position: relative
+        width: 100%
+        background: #ddd
+        margin-bottom: 45px
+        .percent
+            height: 32px
+            margin-top: -41px
+            position: absolute
+            right: calc(100% - 40px)
+            width: 46px
+            z-index: 10
+            color: #fff
+            border-radius: 4px
+            font-weight: 600
+            font-size: 14px
+            line-height: 31px
+            top: 50%
+            text-align: center
+            border: 1px solid $blue
+            color: $blue
+            .arrow
+                border: 1px solid $blue
+                border-width: 0 1px 1px 0
+                display: inline-block
+                padding: 0px
+                transform: translateY(33.5px) rotate(45deg) skew(3deg, 3deg) translateX(-27px)
+                bottom: 8px
+                position: absolute
+                background: $dark
+
+    .item-progress
+        background-color: $blue
+        border-radius: 2px
+        height: 100%
+        left: 0
+        position: absolute
+        top: 0
+        width: 1%
+    .skill-text
+        display: block
+        margin-bottom: 18px
+        font-size: 16px
+        color: $gray3
+        font-weight: 500
+        text-transform: uppercase
+
+@media only screen and (min-width: 360px) and (max-width: 768px)
+    .about-me
+        margin-bottom: 300px
+        margin-top: 200px
+        flex-direction: column
+        gap: 50px
+        .image-container
+            margin-top: 80px
+            position: relative
+            width: 250px
+            .image
+                margin-top: 0px
+                height: 250px
+                width: 250px
+            .image::before
+                position: absolute
+                content: ''
+                border: 4px solid $blue
+                top: 0
+                right: 0
+                bottom: 0
+                left: 0
+                z-index: -1
+                transform: translate3d(26px, 26px, -26px)
+        .details
+            margin-left: 10px
+        .my-skills
+            gap: 10px

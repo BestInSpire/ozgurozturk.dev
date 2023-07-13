@@ -1,0 +1,70 @@
+@import ../global/veriables
+nav
+    background-color: $gray
+    height: 80px
+    display: flex
+    justify-content: space-around
+    align-items: center
+    color: $white
+    border-bottom: 2px solid $gray2
+    position: fixed
+    width: 100%
+    top: 0
+    z-index: 9999
+    ul
+        list-style: none
+        list-style-type: none
+        display: flex
+        gap: 30px
+        li
+            cursor: pointer
+            i
+                margin-right: 10px
+                font-size: 20px
+                transform: translateY(1.9px)
+                display: inline
+        li::after
+            content: ''
+            display: block
+            position: relative
+            width: 0
+            margin-left: 25px
+            border-bottom: 3px solid $white
+            transition: all .3s ease
+        li:hover:after
+            width: calc(100% - 25px)
+            transition: all .3s ease
+            color: $blue!important
+    h1
+        font-family: 'Rochester', cursive
+        font-size: 40px
+    i
+        display: none
+
+@media only screen and (min-width: 360px) and (max-width: 768px)
+    nav
+        ul
+            display: flex
+            position: fixed
+            flex-direction: column
+            background-color: $gray
+            padding: 17px
+            // transition: all .4s
+            transition-timing-function: ease-in
+            height: calc(100vh - 80px)
+            top: 80px
+            width: 100%
+            justify-content: center
+            align-items: center
+            gap: 50px
+            li
+                font-size: 25px
+        ul.closed
+            // display: none
+            position: absolute
+            margin-right: 1550px
+            // transition: all .8s ease-out
+        i
+            display: block
+            font-size: 35px
+            cursor: pointer
