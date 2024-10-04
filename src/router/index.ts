@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 const routes = [
-  { path: "/", component: () => import("../views/Home.vue") },
-  { path: "/my-self", component: () => import("../views/My-Self.vue") },
+  { path: "/", component: () => import("../views/MySelf.vue") },
   { path: "/blog", component: () => import("../views/Blog.vue") },
 ];
 
